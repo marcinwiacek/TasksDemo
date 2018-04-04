@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Tasks</string>
+
+    <string name="channel_notification_name">Tasks channel</string>
+    <string name="channel_notification_description">Tasks channel description</string>
+
+    <string name="notification_text_executing">Current run: %1$d miliseconds</string>
+    <string name="notification_text_complete">Task complete</string>
+    <string name="notification_button_new">New</string>
+    <string name="notification_button_cancel">Cancel</string>
+
+    <string name="main_activity_tab_title_pending">Pending</string>
+    <string name="main_activity_tab_title_completed">Completed</string>
+    <string name="main_activity_snooze_task_message">Task %s will be started by one minute</string>
+    <string name="task_list_entry_time_info">All runs: %1$d miliseconds</string>
+
+    <string name="add_edit_activity_title_edit">Edit Task</string>
+    <string name="add_edit_activity_title_new">New Task</string>
+    <string name="add_edit_activity_task_name_label">Name</string>
+    <string name="add_edit_activity_task_name_edit_hint">Task name (not empty)</string>
+    <string name="add_edit_activity_task_description_label">Description</string>
+    <string name="add_edit_activity_task_description_edit_hint">Task description</string>
+    <string name="add_edit_activity_file_header">File</string>
+    <string name="add_edit_activity_file_select_default_text">Click to select</string>
+    <string name="add_edit_activity_task_keyword_hint">Input your keyword</string>
+    <string name="add_edit_activity_save_button_text">Save</string>
+    <string name="add_edit_activity_cancel_button_text">Cancel</string>
+    <string name="add_edit_activity_login_failed_message">Login failed, cannot upload file, try again</string>
+    <string name="add_edit_activity_upload_file_failed_message">File upload failed, try again</string>
+</resources>

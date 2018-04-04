@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ProgressBar
+        android:id="@+id/uploadFileProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:max="100"
+        android:visibility="gone" />
+
+    <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/addEditLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/taskNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/taskNameEditText"
+            android:layout_below="@id/uploadFileProgressBar"
+            android:text="@string/add_edit_activity_task_name_label" />
+
+        <EditText
+            android:id="@+id/taskNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uploadFileProgressBar"
+            android:layout_toEndOf="@id/taskDescriptionTextView"
+            android:inputType="textAutoComplete"
+            android:ellipsize="end"
+            android:hint="@string/add_edit_activity_task_name_edit_hint" />
+
+        <TextView
+            android:id="@+id/taskDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/taskDescriptionEditText"
+            android:text="@string/add_edit_activity_task_description_label" />
+
+        <EditText
+            android:id="@+id/taskDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskNameEditText"
+            android:layout_toEndOf="@id/taskDescriptionTextView"
+            android:inputType="textAutoComplete"
+            android:ellipsize="end"
+            android:hint="@string/add_edit_activity_task_description_edit_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taskDescriptionEditText"
+            android:layout_alignBaseline="@id/taskFilePickerTextView"
+            android:text="@string/add_edit_activity_file_header" />
+
+        <EditText
+            android:id="@+id/taskFilePickerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/taskDescriptionEditText"
+            android:layout_toEndOf="@id/taskDescriptionTextView"
+            android:background="@null"
+            android:inputType="none"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="@string/add_edit_activity_file_select_default_text" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/taskKeywordListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cancelButton"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/taskFilePickerTextView" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/add_edit_activity_save_button_text" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/add_edit_activity_cancel_button_text" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/taskKeywordAddFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/taskKeywordListRecyclerView"
+            android:layout_alignEnd="@+id/taskDescriptionEditText"
+            android:layout_margin="10dp"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </android.widget.RelativeLayout>
+</android.widget.RelativeLayout>
